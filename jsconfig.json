@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "Fonts/*": ["src/assets/fonts/*"],
+            "Images/*": ["src/assets/images/*"],
+            "Components/*": ["src/components/*"],
+            "Containers/*": ["src/containers/*"],
+            "Utils/*": ["src/utils/*"]
+        }
+    },
+    "exclude": ["node_modules", "dist"]
+}
