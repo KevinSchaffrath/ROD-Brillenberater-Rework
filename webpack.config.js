@@ -51,7 +51,7 @@ module.exports = async (env, argv) => ({
         ]
     },
     devServer: {
-        port: await getPort(4000), // eslint-disable-line
+        port: await getPort(),
         host: '127.0.0.1',
         open: true,
         disableHostCheck: true
@@ -112,10 +112,10 @@ module.exports = async (env, argv) => ({
 /**
  * Gets the nearest open port after the default Port given.
  *
- * @param {Number} defaultPort The Port you want to use.
+ * @param {Number} [defaultPort = 4000] The Port you want to use.
  * @returns {Number} The port nearest to the one you want and that is open.
  */
-async function getPort(defaultPort) {
+async function getPort(defaultPort = 4000) {
     portfinder.basePort = defaultPort;
 
     return portfinder.getPortPromise();
